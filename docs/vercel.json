@@ -5,9 +5,18 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
       ]
     }
   ],
@@ -35,52 +44,102 @@
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "sveltekit.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "sveltekit.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/sveltekit"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "solid-start.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "solid-start.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/solid-start"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "express.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "express.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/express"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "nextjs.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "nextjs.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/nextjs"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "errors.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "errors.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/core/errors/:path*"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "warnings.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "warnings.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/warnings/:path*"
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "adapters.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "adapters.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/getting-started/database"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "adapters.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "adapters.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/reference/adapter/:path*"
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "providers.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "providers.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/getting-started/authentication/oauth"
     },
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "providers.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "providers.authjs.dev"
+        }
+      ],
       "destination": "https://authjs.dev/getting-started/providers/:path"
     },
     {
@@ -90,7 +149,12 @@
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "discord.authjs.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "discord.authjs.dev"
+        }
+      ],
       "destination": "https://discord.gg/nwgKuTPJmj"
     },
     {
@@ -140,6 +204,26 @@
     {
       "source": "/guides/upgrade-to-v5",
       "destination": "/getting-started/migrating-to-v5"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "koa.authjs.dev"
+        }
+      ],
+      "destination": "https://authjs.dev/reference/koa"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "koa.authjs.dev"
+        }
+      ],
+      "destination": "https://authjs.dev/reference/koa"
     }
   ]
 }
